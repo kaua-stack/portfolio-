@@ -1014,6 +1014,7 @@ header.scrolled {
   transition: opacity 0.5s ease;
   top: 0;
   left: 0;
+  height: auto;
 }
 
 .testimonial-card.active {
@@ -1201,6 +1202,27 @@ header.scrolled {
   margin-top: 30px;
 }
 
+/* Footer social icons alignment fix */
+.footer-contact .social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.footer-contact .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
 .social-links-contact a {
   display: inline-flex;
   align-items: center;
@@ -1305,6 +1327,7 @@ footer {
   }
 }
 
+/* Fix for footer content alignment on mobile */
 @media (max-width: 576px) {
   .footer-content {
     grid-template-columns: 1fr;
@@ -1318,17 +1341,10 @@ footer {
     transform: translateX(-50%);
   }
 
-  .footer-services li {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  .footer-services li::before {
-    display: none;
-  }
-
   .footer-contact p {
     justify-content: center;
+    display: flex;
+    align-items: center;
   }
 
   .footer-contact .social-links {
